@@ -1,0 +1,92 @@
+/* src/components/Header.css */
+.header {
+    display: flex;
+    justify-content: center; /* Center all items horizontally */
+    align-items: center; /* Vertically center items */
+    padding: 10px 20px; /* Add some padding */
+    background: linear-gradient(135deg, #6dbd9e, #3cb371); /* Gradient background */
+    color: white; /* Header text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    margin: 0; /* Ensure no margin */
+    width: 100%; /* Make sure it spans the full width */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    height: 100px; /* Define the height of the header */
+    position: fixed; /* Fix the header to the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the header is above other elements */
+    transition: transform 0.3s ease; /* Smooth transition for show/hide */
+}
+
+.header--hidden {
+    transform: translateY(-100%); /* Hide the header by moving it up */
+}
+
+.header .logos {
+    position: absolute;
+    left: 20px; /* Adjust based on your padding */
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    height: 90px; /* Set the height to match the header height */
+    width: 90px; /* Set the width to match the height */
+    margin-right: 10px; /* Space between logos */
+}
+
+.header .shiny-text {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
+    background-clip: text;
+    -webkit-background-clip: text; /* Chrome, Safari */
+    -moz-background-clip: text; /* Firefox */
+    -ms-background-clip: text; /* Internet Explorer */
+    -o-background-clip: text; /* Opera */
+    -webkit-text-fill-color: transparent; /* Ensures text color is transparent in Webkit browsers */
+    color: transparent; /* Ensure text color is transparent for other browsers */
+    animation: shine 5s infinite linear;
+    background-size: 200% auto; /* Make the gradient twice as wide as the text */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow to the text */
+    text-align: center; /* Center the text */
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.logout-button {
+    background-color: #f44336; /* Red color for the logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the button */
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.header .user-logout {
+    position: absolute;
+    right: 20px; /* Adjust based on your padding */
+    display: flex;
+    align-items: center;
+}
+
+.header .username {
+    margin-right: 10px; /* Space between username and logout button */
+    color: #fff; /* White color for text */
+    font-size: 16px; /* Font size for the username */
+}

@@ -1,0 +1,126 @@
+.admin-pestwiki-container {
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.admin-pestwiki-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-pestwiki-table-container {
+    margin-top: 20px;
+    width: fit-content; /* Ensure the container takes up the full width */
+    overflow-x: auto;
+    align-items: center;
+}
+
+.admin-pestwiki-table {
+    width: 100%; /* Ensure the table takes up the full width */
+}
+
+.admin-pestwiki-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.admin-pestwiki-thumbnail-table {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.admin-pestwiki-image-nav-button {
+    cursor: pointer;
+}
+
+.admin-pestwiki-add-button {
+    margin-bottom: 20px;
+}
+
+.admin-pestwiki-form-container {
+    margin-bottom: 20px;
+}
+
+.admin-pestwiki-preview-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.admin-pestwiki-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    color: #aaa;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.admin-pestwiki-error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.admin-pestwiki-top-view-container {
+    margin: 40px;
+}
+
+.admin-pestwiki-pest-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.admin-pestwiki-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.admin-pestwiki-pest-details {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 250px;
+}
+
+.admin-pestwiki-pest-recommendation {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 250px;
+}
+
+.admin-pestwiki-title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 10px 0;
+    font-size: 2rem; /* Larger font size for the title */
+    color: #1976d2; /* Interactive color */
+    text-align: center; /* Center the title */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.admin-pestwiki-title:hover {
+    color: #004ba0; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

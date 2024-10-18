@@ -1,0 +1,85 @@
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.app-container.with-header {
+  padding-top: 140px; /* Additional padding when header is present */
+}
+
+.routes-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: stretch; /* Make sure it stretches to full width */
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  background-color: #FFF5EE; /* Default background color */
+}
+
+.routes-container.login-background {
+  background-color: transparent; /* Make background transparent for login page */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure the login page video background remains visible */
+.login__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.login__video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

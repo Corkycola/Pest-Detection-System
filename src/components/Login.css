@@ -1,0 +1,193 @@
+/* src/components/Login.css */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.login__welcome-text {
+    color: white;
+    font-size: 3rem;
+    z-index: 1;
+    text-align: center;
+    margin: 20px 0;
+    animation: slideInLeft 4s ease-in-out 3s infinite;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.login__video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.login__admin-link {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+    z-index: 1;
+}
+
+.login__floating-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.login__left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__logo {
+    width: 230px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login__right-side {
+    flex: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login__form div {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.login__form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.login__form input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login__password-container {
+    width: 100%;
+}
+
+.login__password-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login__password-input-container input {
+    padding-right: 40px;
+}
+
+.login__password-input-container .login__eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.login__error-message {
+    color: red;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    height: 35px;
+    font-size: 0.75rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.login__form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login__form button:hover {
+    background-color: #0056b3;
+}
+
+.login__logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.login__apu-logo {
+    max-width: 180px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.login__sdg-logo {
+    max-width: 350px;
+    height: auto;
+}
+
+@media (min-width: 600px) {
+    .login__floating-container {
+        flex-direction: row;
+    }
+
+    .login__left-side, .login__right-side {
+        flex: 1;
+        text-align: center;
+    }
+}

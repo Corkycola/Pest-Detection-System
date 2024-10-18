@@ -1,0 +1,16 @@
+/* src/components/ResponsiveHeader.css */
+.responsive-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Smooth transition for show/hide */
+    background-color: #fff; /* Ensure background color for visibility */
+    height: 100px; /* Adjust the height to match the header height */
+}
+
+
+.header--hidden {
+    transform: translateY(-100%); /* Hide the header by moving it up */
+}

@@ -1,0 +1,55 @@
+.admin-container {
+    width: 80%; /* Set the container width to 70% of the screen */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.admin-title {
+    margin: 10px 0;
+    font-size: 1.5rem; /* Smaller font size */
+    color: #1976d2; /* Interactive color */
+    padding-top: 10px; /* Add padding */
+    text-align: center; /* Center the title */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.admin-title:hover {
+    color: #004ba0; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.MuiTableCell-head {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+}
+
+.MuiTableRow-root:hover {
+    background-color: #f1f1f1;
+}
+
+.MuiPaper-elevation3 {
+    border-radius: 10px;
+    margin: 20px auto; /* Center horizontally and add vertical margin */
+    width: 80%; /* Ensure paper takes 90% of the container width */
+}
+
+
+.MuiTypography-h5 {
+    margin-bottom: 10px;
+}
+
+.table-container {
+    width: 100%; /* Make the table container fill its parent */
+    margin: 0 auto;
+}
+
+.wide-table {
+    width: 100%; /* Ensure the table takes up the full width of the container */
+}
+
+.timestamp-cell {
+    white-space: nowrap; /* Prevent timestamp cell from wrapping */
+}

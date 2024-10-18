@@ -1,0 +1,237 @@
+/* src/components/UserHomePage.css */
+.homepage-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 900px; /* Ensure the card is centered within a narrower width */
+    margin-bottom: 20px; /* Ensure some space between elements */
+}
+
+.card {
+    width: 100%;
+    max-width: 900px; /* Ensure the card is centered */
+    height: 350px; /* Increase the height */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.panel-container.flipped .card {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow-y: auto; /* Add scrolling for overflowing content */
+}
+
+.card-front h2 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: start;
+    padding-left: 10%;
+    overflow-y: auto; /* Ensure content fits within the card */
+    backface-visibility: hidden;
+}
+
+
+.top-pests {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around; /* Space the cards evenly */
+    align-items: center; /* Center align items */
+    width: 100%;
+    height: 50%;
+}
+
+.top-pest-item {
+    flex: 1; /* Make items flexible */
+    max-width: 20%; /* Reduce width to ensure items don't get too wide */
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Ensure text is centered */
+}
+
+.top-pest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.top-pest-item img {
+    max-width: 100%; /* Ensure images do not exceed the container */
+    max-height: 150px; /* Limit the height */
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+.logs-panel {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add scrollable for logs */
+}
+
+.summary-panel {
+    width: 100%;
+    max-width: 1100px; /* Ensure the width matches */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Ensure some space between elements */
+}
+
+.table-container {
+    overflow-y: auto; /* Make the table scrollable */
+}
+
+.table-container.items-3 {
+    max-height: 200px; /* Adjust height for 3 items */
+}
+
+.table-container.items-5 {
+    max-height: 300px; /* Adjust height for 5 items */
+}
+
+.table-container.items-10 {
+    max-height: 500px; /* Adjust height for 10 items */
+}
+
+.summary-panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary-panel th, .summary-panel td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.pagination-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-controls label {
+    margin-right: 20px;
+}
+
+.pagination button {
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #1976d2;
+    color: white;
+}
+
+.pagination button:hover {
+    background: #ddd;
+}
+
+.view-details-button {
+    background: none;
+    border: none;
+    color: #1976d2;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+.view-details-button:hover {
+    color: #004ba0;
+}
+
+.view-full-logs-button {
+    background: none;
+    border: none;
+    color: #1976d2;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.view-full-logs-button:hover {
+    color: #004ba0;
+}
+
+.view-dashboard-button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-dashboard-button:hover {
+    background: #004ba0;
+}
+
+.flip-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.timestamp {
+    color: green;
+}
+
+.pest-name {
+    color: red;
+}
+
+.crop-area {
+    color: blue;
+}
