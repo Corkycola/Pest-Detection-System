@@ -1,22 +1,20 @@
-Pest Detection System
+# Pest Detection System
 This project is a web application designed for real-time pest detection, helping farmers monitor pest presence through a mobile-integrated and web-based platform using YOLO-based object detection.
 
-Getting Started
-Prerequisites
+# Getting Started
+## Prerequisites
 Node.js and npm must be installed on your system.
 A Google service file (downloaded from Firebase or your Google Cloud Console) must be added to the project.
-Setup
+## Setup
 Clone the repository to your local machine:
-
-bash
-Copy code
 git clone https://github.com/your-repo/pest-detection-system.git
 cd pest-detection-system
-Add Google Service File: Place your Google service file (e.g., google-services.json or serviceAccountKey.json) in the project root.
 
-Install Dependencies:
+## Add Google Service File: Place your Google service file (e.g., google-services.json or serviceAccountKey.json) in the project root.
 
-Navigate to both the backend and frontend folders and install dependencies:
+## Install Dependencies:
+
+# Navigate to both the backend and frontend folders and install dependencies:
 bash
 Copy code
 # In the backend folder
